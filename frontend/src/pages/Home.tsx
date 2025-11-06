@@ -2,46 +2,64 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-white text-gray-800 p-6">
-      {/* Header */}
-      <h1
-        className="text-4xl sm:text-6xl font-bold mb-4 text-center"
-      >
-        MeetStranger
-      </h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-b from-[#0f172a] to-[#1e293b] text-gray-100 p-6">
+      {/* Logo / Brand */}
+      <div className="inline-block group">
+        <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight mb-4 group-hover:-translate-y-1 ease-out duration-300 transform-gpu">
+          <span className="text-transparent bg-clip-text bg-linear-to-br from-blue-600 to-cyan-100 cursor-pointer">
+            TalkRush
+          </span>
+        </h1>
+      </div>
 
-      <p
-        className="text-lg sm:text-xl text-gray-600 text-center mb-8 max-w-lg"
-      >
-        Practice English (or any language) with real people — instantly through
-        face-to-face video chats.
+      {/* Tagline */}
+      <p className="text-gray-400 text-lg sm:text-xl max-w-lg text-center mb-10 leading-relaxed">
+        Connect instantly. Speak confidently.
+        <span className="block text-gray-300 mt-1">
+          Practice real conversations — anytime, anywhere.
+        </span>
       </p>
 
-      {/* Start button */}
-      <div
-      >
+      {/* CTA */}
+      <div className="flex flex-wrap gap-4 justify-center">
         <Link to="/chat">
-          <button className="rounded-2xl text-lg px-8 py-6">
+          <button className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-semibold text-lg transition-all shadow-md hover:shadow-blue-500/30 cursor-pointer">
             Start Chat
           </button>
         </Link>
+        <button className="px-8 py-3 border border-gray-600 hover:border-gray-400 rounded-xl font-semibold text-lg text-gray-300 hover:text-white transition-all cursor-pointer">
+          Learn More
+        </button>
       </div>
 
-      {/* How it works */}
-      <div
-        className="mt-16 max-w-md text-center"
-      >
-        <h2 className="text-2xl font-semibold mb-4">How it works</h2>
-        <ul className="space-y-3 text-gray-600">
-          <li>1️⃣ Allow camera and microphone access</li>
-          <li>2️⃣ Get paired with a random person</li>
-          <li>3️⃣ Practice speaking — face to face</li>
-        </ul>
+      {/* How It Works */}
+      <div className="mt-20 w-full max-w-3xl grid sm:grid-cols-3 gap-6 text-center">
+        <div className="bg-white/5 hover:bg-white/10 p-6 rounded-2xl border border-white/10 transition-all">
+          <span className="text-3xl mb-2 block">🎧</span>
+          <h3 className="font-semibold text-lg mb-1">Enable</h3>
+          <p className="text-gray-400 text-sm">
+            Allow camera and microphone access
+          </p>
+        </div>
+        <div className="bg-white/5 hover:bg-white/10 p-6 rounded-2xl border border-white/10 transition-all">
+          <span className="text-3xl mb-2 block">⚡</span>
+          <h3 className="font-semibold text-lg mb-1">Match</h3>
+          <p className="text-gray-400 text-sm">
+            Get paired instantly with someone new
+          </p>
+        </div>
+        <div className="bg-white/5 hover:bg-white/10 p-6 rounded-2xl border border-white/10 transition-all">
+          <span className="text-3xl mb-2 block">💬</span>
+          <h3 className="font-semibold text-lg mb-1">Talk</h3>
+          <p className="text-gray-400 text-sm">
+            Start a real conversation — face to face
+          </p>
+        </div>
       </div>
 
       {/* Footer */}
-      <footer className="mt-20 text-sm text-gray-400">
-        © {new Date().getFullYear()} MeetStranger. Practice languages safely.
+      <footer className="mt-20 text-sm text-gray-500">
+        © {new Date().getFullYear()} TalkRush · Built for real conversations.
       </footer>
     </div>
   );
