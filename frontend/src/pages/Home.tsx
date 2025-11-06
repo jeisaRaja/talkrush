@@ -22,7 +22,7 @@ export default function Home() {
 
       {/* CTA */}
       <div className="flex flex-wrap gap-4 justify-center">
-        <Link to="/chat">
+        <Link to="/login">
           <button className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-semibold text-lg transition-all shadow-md hover:shadow-blue-500/30 cursor-pointer">
             Start Chat
           </button>
